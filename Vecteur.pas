@@ -17,7 +17,7 @@ function sommeVect (vecteur1, vecteur2: Vect2D):Vect2D;
 function soustVect (vecteur1, vecteur2: Vect2D):Vect2D;
 function prodParScal (x: integer; vecteur1: Vect2D):Vect2D;
 function prodScal (var vecteur1, vecteur2: Vect2D):integer;
-function prodVect (vecteur1, vecteur2: Vect2D):integer;
+function prodVect (vecteur1, vecteur2: Vect2D):Vect2D;
 
 implementation
 
@@ -74,9 +74,12 @@ function prodScal (var vecteur1, vecteur2: Vect2D):integer;
 		prodScal:=(getposX(vecteur1)*getposX(vecteur2))+(getposY(vecteur1)*getposY(vecteur2));
 	end;
 
-function prodVect (vecteur1, vecteur2: Vect2D):integer;
+function prodVect (vecteur1, vecteur2: Vect2D):Vect2D;
+	var PV: Vect2D;
 	begin
-		prodVect:=(getposX(vecteur1)*getposX(vecteur2))-(getposY(vecteur1)*getposY(vecteur2));
+		setposX:= (getposY(vecteur1)-getposY(vecteur2), PV);
+		setposY:= (getposX(vecteur2)-getposX(vecteur1), PV);
+		prodVect:=PV;
 	end;
 
 

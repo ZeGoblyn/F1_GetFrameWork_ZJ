@@ -6,7 +6,7 @@ var Tenis: TBalle;
 	Tenis2: TBalle;
 	Tenis3: TBalle;
 	LeProduitDuScal: integer;
-	LeProduitDuVect: integer;	
+	LeProduitDuVect: Vect2D;	
 
 begin
 	Clrscr;
